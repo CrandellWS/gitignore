@@ -14,4 +14,8 @@ cabal.sandbox.config
 *.prof
 *.aux
 *.hp
+*.eventlog
 .stack-work/
+cabal.project.local
+.HTF/
+.ghc.environment.*

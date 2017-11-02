@@ -7,11 +7,13 @@
 # Email spool folder
 /app/spool/*
 
-# Cache and logs (Symfony3)
+# Cache, session files and logs (Symfony3)
 /var/cache/*
 /var/logs/*
+/var/sessions/*
 !var/cache/.gitkeep
 !var/logs/.gitkeep
+!var/sessions/.gitkeep
 
 # Parameters
 /app/config/parameters.yml
@@ -23,14 +25,10 @@
 /bin/*
 !bin/console
 !bin/symfony_requirements
-/vendor/
 
 # Assets and user uploads
 /web/bundles/
 /web/uploads/
-
-# Assets managed by Bower
-/web/assets/vendor/
 
 # PHPUnit
 /app/phpunit.xml
@@ -39,5 +37,8 @@
 # Build data
 /build/
 
-# Composer PHAR
-/composer.phar
+# Backup entities generated with doctrine:generate:entities command
+**/Entity/*~
+
+# Embedded web-server pid file
+/.web-server-pid
